@@ -20,4 +20,4 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_SPACE_NAME: AlvarezGarciaGon/autoresearch_crew
         run: |
-          git push https://user:$HF_TOKEN@huggingface.co/spaces/$HF_SPACE_NAME main
+          git push --force https://user:$HF_TOKEN@huggingface.co/spaces/$HF_SPACE_NAME main
