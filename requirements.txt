@@ -7,3 +7,6 @@ chainlit
 apscheduler
 email-validator
 fastapi-sso
+setuptools>=65.0.0
+wheel
+nodeenv>=1.8.0
