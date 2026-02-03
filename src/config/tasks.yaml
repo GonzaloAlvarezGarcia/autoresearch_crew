@@ -1,0 +1,17 @@
+research_task:
+  description: >
+    Conduct a comprehensive analysis of the latest advancements in {topic}.
+    Identify key trends, breakthrough technologies, and potential industry impacts.
+    Focus on the most recent data from the last 12 months.
+  expected_output: >
+    A detailed research report with at least 5 key findings, including sources
+    and statistical data where available.
+
+writing_task:
+  description: >
+    Using the research report provided, write an engaging blog post about {topic}.
+    The post should be informative, accessible, and structured with clear headings.
+    Avoid jargon where possible, or explain it if necessary.
+  expected_output: >
+    A 4-paragraph blog post formatted in Markdown, ready for publication.
+    Include a catchy title and a summary section.
