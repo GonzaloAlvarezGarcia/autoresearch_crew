@@ -1,7 +1,7 @@
 import os
 import yaml
 from crewai import Agent, Task, Crew, Process
-from crewai_tools import SerperDevTool
+from crewai_tools import SerperDevTool, ScrapeWebsiteTool
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 
@@ -26,6 +26,7 @@ class AutoResearchCrew:
 
         # Initialize Tools
         self.search_tool = SerperDevTool()
+        self.scrape_tool = ScrapeWebsiteTool()
 
     def _load_yaml(self, file_path):
         with open(file_path, "r") as file:
@@ -40,7 +41,8 @@ class AutoResearchCrew:
             verbose=True,
             allow_delegation=False,
             llm=self.llm,
-            tools=[self.search_tool],
+            tools=[self.search_tool, self.scrape_tool],
+            max_rpm=10,
         )
 
     def writer(self):
@@ -52,6 +54,7 @@ class AutoResearchCrew:
             verbose=True,
             allow_delegation=False,
             llm=self.llm,
+            max_rpm=10,
         )
 
     def research_task(self, agent, topic):
